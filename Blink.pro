@@ -12,9 +12,10 @@ TARGET = Blink
 TEMPLATE = app
 
 
-SOURCES += main.cpp\
-        mainwindow.cpp
+SOURCES += main.cpp \
+    blinkwindow.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += \
+    blinkwindow.h
 
-FORMS    += mainwindow.ui
+FORMS    +=

@@ -2,21 +2,25 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QTimer>
 
-namespace Ui {
-class MainWindow;
-}
-
-class MainWindow : public QMainWindow
+class BlinkWindow : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    explicit MainWindow(QWidget *parent = 0);
-    ~MainWindow();
+    explicit BlinkWindow(QWidget *parent = 0);
+    ~BlinkWindow();
+
+public slots:
+    void blink();
 
 private:
-    Ui::MainWindow *ui;
+    QTimer blinker;
+    bool blinking;
+
+    int counter;
+
 };
 
 #endif // MAINWINDOW_H
